@@ -1,0 +1,296 @@
+/* font-family: "Concert One", sans-serif; */
+/* font-family: "Roboto Slab", serif; */
+/* font-family: "Noto Sans", sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 2.6em;
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(3px);
+    position: fixed;
+}
+
+nav h1 {
+    font-size: xx-large;
+    color: white;
+}
+
+.links {
+    display: none;
+    font-weight: bolder;
+    gap: 1.4em;
+    font-size: larger;
+}
+
+.links a {
+    color: azure;
+    transition: .3s;
+}
+.links a:hover{
+    color: navajowhite;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 3em;
+    gap: .4em;
+
+}
+
+.menu p {
+    width: 70%;
+    padding: .1em;
+    background: slateblue;
+    transition: .5s;
+    border-radius: .5em;
+}
+
+.new-top {
+    transform: rotate(45deg) translate(.5em, .5em);
+}
+
+.mid {
+    scale: 1;
+}
+
+.new-mid {
+    scale: 0;
+}
+
+.new-btm {
+    transform: rotate(-45deg) translate(.5em, -.5em);
+}
+
+main {
+    color: blue;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(9px);
+    transition: .3s;
+    left: -50vw;
+}
+
+main a {
+    font-size: xx-large;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    transition: .3s;
+}
+main a:hover{
+ color: navajowhite;
+}
+
+.close {
+    position: absolute;
+    top: 1em;
+    left: .5em;
+    z-index: 300;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.front-view {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(200, 200, 0, .1)), url("https://img.freepik.com/premium-photo/let-s-sing-stylish-retro-microphone_152904-1370.jpg?w=740");
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    padding: 1em 2em;
+    align-items: center;
+}
+
+.front-view h1 {
+    font-size: xx-large;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: xxx-large;
+}
+
+.front-view h2 {
+    font-size: xxx-large;
+    -webkit-text-stroke: 1px gray;
+    color: transparent;
+}
+
+.text {
+    color: navajowhite;
+    font-weight: 700;
+    font-size: larger;
+    font-family: "Roboto Slab", serif;
+}
+
+.front-view article {
+    color: slategray;
+    font-weight: lighter;
+    padding-top: 1em;
+    font-family: "Roboto Slab", serif; 
+}
+
+.button {
+    padding-top: 2em;
+    display: flex;
+    gap: 1em;
+}
+
+button {
+    border: 1px solid white;
+    border-radius: .4em;
+    padding: .8em;
+    font-weight: bolder;
+    color: navajowhite;
+    background: none;
+    cursor: pointer;
+}
+button a{
+    color: navajowhite;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.intro {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em .3em;
+}
+
+.intro h1 {
+    font-size: xx-large;
+    color: slategray;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.intro p {
+    font-weight: 500;
+    font-size: x-large;
+    color: gray;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    padding: 2em .2em;
+    gap: 1em;
+}
+
+.category div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-weight: bolder;
+    font-size: 1.3em;
+    color: darkslategrey;
+}
+
+.affiliate {
+    padding: 2em 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    font-size: 2.3em;
+    color: slategrey;
+    opacity: .5;
+    font-family: "Concert One", sans-serif;
+}
+
+.Register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background: black;
+}
+.Register h1{
+ font-size: 2em;
+ color: slateblue;
+}
+form{
+    box-shadow: 1px 1px 2px rgba(250, 0, 0, .4);
+    height: fit-content;
+    padding: 4em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+   
+}
+input{
+    width: 20em;
+    padding: .8em .3em;
+    border-radius: .4em;
+    border: none;
+    border-bottom: 1px solid slategray;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    background: slateblue;
+    color: navajowhite;
+
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width:760px) {
+    .links {
+        display: flex;
+
+    }
+
+    .links a {
+        padding: 0 .4em;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    main {
+        display: none;
+    }
+
+ .intro{
+    align-items: center;
+ }
+ .category{
+    align-items: center;
+ }
+}

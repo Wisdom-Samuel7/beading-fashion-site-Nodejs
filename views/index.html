@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Beeding</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        scroll-behavior: smooth;
+    }
+
+    .first a {
+        color: slategray;
+    }
+
+    body {
+        background: transparent;
+    }
+
+    nav {
+        width: 100%;
+        padding: 6em 0;
+        /* background: linear-gradient(to bottom right,rgba(70,0,0,.8),rgba(250,20,200,.6)); */
+        background: orangered;
+        background-image: url("https://img.freepik.com/premium-photo/handcraft-accessories_678602-90.jpg?w=740");
+        background-size: cover;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 3em;
+        font-family: sans-serif serif;
+        color: slateblue;
+    }
+
+    .logo img {
+        width: 7em;
+        height: 4em;
+        object-fit: cover;
+        border-radius: 50%;
+        object-position: center;
+    }
+
+    .first {
+        width: 100%;
+        height: fit-content;
+        background: rgba(100, 0, 0, .2);
+        display: flex;
+        gap: 1.5em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 6.7em 1.4em;
+        font-weight: 800;
+        /* background: transparent; */
+        background-image: url("");
+    }
+
+    .first span {
+        font-size: 18px;
+        color: #345;
+        font-family: sans-serif;
+        font-weight: 500;
+    }
+
+    .options {
+        display: flex;
+        gap: 1em;
+        padding: 4em 0;
+    }
+
+    button {
+        background: purple;
+        border: none;
+        padding: .7em 3em;
+        border-radius: .5em;
+        color: antiquewhite;
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .Gallery,
+    .contact {
+        width: 100%;
+        height: fit-content;
+        padding: 2em .6em;
+
+    }
+
+    .headline {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .headline p {
+        font-weight: 600;
+        color: slategray;
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    .pics {
+        width: 100%;
+        height: fit-content;
+        padding: 1em .5em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .pics img {
+        width: 12rem;
+        height: 12rem;
+        border-radius: .6em;
+        object-fit: cover;
+
+    }
+    form{
+        width: 100%;
+        height: fit-content ;
+        gap: 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+         margin-top: 4em;
+    }
+    input{
+        width: 20em;
+        padding: .8em .5em;
+        background: magenta;
+        border: none;
+    }
+    textarea{
+       border: .5px solid slategray;
+       padding: .8em .5em;
+    }
+    input,textarea{
+        border-radius: .5em;
+        font-weight: 700;
+        background: magenta;
+    }
+    ::placeholder{
+        color: beige;
+    }
+    footer{
+        width: 100%;
+        background: cornflowerblue;
+        padding: 1em .4em;
+        font-weight: 900;
+        color: honeydew;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="IMG-20240421-WA0025.jpg" alt="">
+        </div>
+
+        <div>
+            <a href="https://wa.me/07035038812">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="purple" class="bi bi-whatsapp"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <section class="first">
+        <p><a href="mailto:ebubeb14@gmail.com">ebubeb14@gmail.com</a></p>
+        <h1> Look glamorous with astonishing beading designs </h1>
+        <span>
+            We are essentially capable of giving you the exact and latest beading design you ever think of on your
+            outfit.
+            We create unique mind-blowing patterns
+            <span>
+
+                <div class="options">
+                    <button><a style="color: aliceblue;" href="#contact">Contact</a></button>
+                    <button>Explore</button>
+                </div>
+    </section>
+
+    <section class="Gallery">
+        <div class="headline">
+            <h1>Gallery</h1>
+            <p>Awesome Beading Designs</p>
+        </div>
+
+        <div data-aos="zoom-out-left" class="pics">
+            <img src="./IMG-20240421-WA0040.jpg" alt="">
+            <p style="color: slateblue;font-size: 18px;margin-top: .3em;font-weight: 700;">Twisting Beading</p>
+        </div>
+
+        <div data-aos="zoom-out-right" class="pics">
+            <img src="./IMG-20240421-WA0041.jpg" alt="">
+            <p style="color: slateblue;font-size: 18px;margin-top: .3em;font-weight: 700;">Dropping Beading</p>
+        </div>
+
+
+        <div data-aos="zoom-out-left" class="pics">
+            <img src="./IMG-20240421-WA0034.jpg" alt="">
+            <p style="color: slateblue;font-size: 18px;margin-top: .3em;font-weight: 700;">Sturde Beading</p>
+        </div>
+
+        <div data-aos="zoom-out-left" class="pics">
+            <img src="./IMG-20240421-WA0035.jpg" alt="">
+            <p style="color: slateblue;font-size: 18px;margin-top: .3em;font-weight: 700;">Filling Beading</p>
+        </div>
+
+        <div data-aos="zoom-out-left" class="pics">
+            <img src="./IMG-20240421-WA0037.jpg" alt="">
+            <p style="color: slateblue;font-size: 18px;margin-top: .3em;font-weight: 700;">Filling Beading</p>
+        </div>
+
+        <div data-aos="zoom-out-left" class="pics">
+            <img src="./IMG-20240421-WA0031.jpg" alt="">
+            <p style="color: slateblue;font-size: 18px;margin-top: .3em;font-weight: 700;">Sturde Beading</p>
+        </div>
+
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="headline">
+            <h1>Contact</h1>
+            <p>Reach out to me here...</p>
+
+            <form action="" method="post">
+                <input type="text" name="name" placeholder="Email">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="Submit" style="color: antiquewhite;">
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+       <p> For more enquiry contact <a href="tel:+2347035038812">+2347035038812</a> </p>
+       <p>Designed by <a href="mailto:wisdsamuel9119@gmail.com">Know-ur-craft</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({ duration: 800 });
+    </script>
+</body>
+
+</html>

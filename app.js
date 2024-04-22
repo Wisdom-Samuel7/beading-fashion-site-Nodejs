@@ -9,6 +9,10 @@ const { log } = require("console")
 
 const bp = require("body-parser")
 
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: false }))
 
@@ -21,7 +25,7 @@ const Regiters = mongoose.Schema({
 
 })
 
-const RegiteredUser = mongoose.model("revampedmusic", Regiters)
+const RegiteredUser = mongoose.model("Beading", Regiters)
 
 const transporter = mailer.createTransport({
    service: "gmail",
@@ -31,7 +35,6 @@ const transporter = mailer.createTransport({
    }
 })
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/", (req, res) => {
    res.sendFile(__dirname + "/views/index.html")
@@ -40,12 +43,12 @@ app.get("/", (req, res) => {
 app.post("/", async (req, res) => {
    try {
 
-      const { name, message } = req.body
+      const { email, message } = req.body
       const CheckPoint = await RegiteredUser.exists({ email })
       if (CheckPoint) {
          res.status(200).send("USER ALREADY EXIST")
       } else {
-         const user = await RegiteredUser.create({ name, message })
+         const user = await RegiteredUser.create({ email, message })
          log(user)
          res.send("THANK YOU FOR REGISTERING,PLEASE CHECK YOUR EMAIL...")
 
@@ -102,5 +105,5 @@ app.get("/rgmca/registeration/process", (req, res) => {
 })
 
 app.listen(3000, () => {
-   console.log("SERVER CONNECTED")
+   console.log("SERVER CONNECTED PORT ::: 3000 ~~~~")
 })
